@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
-import "./Contact.css"; // Import the CSS file
+import "./contact.css"; // Import the CSS file
 
 const Contact = () => {
   return (
