@@ -1,85 +1,65 @@
-/* Import Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-/* Global styles */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
-
-/* Gradient background with animation */
-.contact-container {
+/* Contact.css */
+.contact-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    to right,
+    #e4ebee,
+    #33eaa7
+  ); /* Gradient background */
+  color: white;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background: linear-gradient(135deg, #319795, #3182ce);
-  color: white;
-  padding: 20px;
-  animation: gradientAnimation 10s ease infinite;
 }
 
-/* Gradient animation */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* Glassmorphism effect for the content */
-.contact-content {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 90%;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Title styling */
 .contact-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-/* Description styling */
 .contact-description {
   font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* Form styling */
-.contact-form {
+.contact-content {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
 .form-input {
-  padding: 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
 .form-input::placeholder {
@@ -87,108 +67,62 @@ body {
 }
 
 .form-input:focus {
-  outline: none;
-  border-color: #319795;
-  box-shadow: 0 0 10px rgba(49, 151, 149, 0.5);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .form-button {
-  padding: 15px;
-  font-size: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: #007bff;
   color: white;
-  background: linear-gradient(135deg, #319795, #3182ce);
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .form-button:hover {
-  background: linear-gradient(135deg, #2c7a7b, #2c5282);
+  background: #0056b3;
 }
 
-/* Contact information styling */
 .contact-info {
-  text-align: left;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .info-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  margin-bottom: 1rem;
   font-size: 1.1rem;
-  font-weight: 300;
-  margin-bottom: 10px;
 }
 
 .info-icon {
+  margin-right: 0.75rem;
   font-size: 1.2rem;
-  color: #319795;
+  color: #007bff;
 }
 
-/* Social links styling */
 .social-links {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .social-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1rem;
   color: white;
-  text-decoration: none;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #319795;
-}
-
-.social-icon {
-  font-size: 1.2rem;
-}
-
-/* Keyframes for fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 2.5rem;
-  }
-
-  .contact-description {
-    font-size: 1rem;
-  }
-
-  .info-title {
-    font-size: 1.8rem;
-  }
-
-  .info-item {
-    font-size: 1rem;
-  }
-
-  .social-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  color: #007bff;
 }
